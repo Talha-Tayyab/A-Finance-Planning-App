@@ -1,0 +1,7 @@
+<h1>Budget Details</h1>
+<p>name: <%= budget.name %></p>
+<p>Amount: <%= budget.amount %></p>
+<a href="/budgets/<%= budget._id %>/edit">Edit</a>
+<form action="/budgets/<%= budget._id %>/delete" method="POST">
+  <button type="submit">Delete</button>
+</form>

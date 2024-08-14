@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budgets</title>
+  </head>
+  <body>
+    <h1>Budgets</h1>
+    <a href="/budgets/new">Add New Budget</a>
+    <ul>
+      <% budgets.forEach(budget => { %>
+      <li>
+        <%= budget.name %> - $<%= budget.amount %>
+        <a href="/budgets/edit/<%= budget._id %>">Edit</a>
+        <a href="/budgets/delete/<%= budget._id %>">Delete</a>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

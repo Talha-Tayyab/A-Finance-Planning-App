@@ -1,0 +1,20 @@
+<h1>Edit Budget</h1>
+<form action="/budgets/<%= budget._id %>/update" method="POST">
+  <label for="name">name:</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    value="<%= budget.name %>"
+    required
+  />
+  <label for="amount">Amount:</label>
+  <input
+    type="number"
+    id="amount"
+    name="amount"
+    value="<%= budget.amount %>"
+    required
+  />
+  <button type="submit">Update</button>
+</form>
